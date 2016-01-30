@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import mockups from './mockupsReducer';
+import dashboard from './dashboardReducer';
 
 const rootReducer = combineReducers({
-    mockups
+    dashboard
 });
 
 export default rootReducer

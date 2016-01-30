@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { ItemTypes } from '../Constants';
 import { DropTarget } from 'react-dnd';
-import { ADD_COMPONENT } from '../actions/mockupActions';
+import { ADD_COMPONENT } from '../actions/dashboadActions';
 import ComponentContainer from './ComponentContainer';
 import Popover from 'react-bootstrap/lib/Popover'
 import _ from 'underscore';

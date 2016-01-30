@@ -10,23 +10,42 @@ var ComponentsMenu = React.createClass({
     render: function() {
 
         var menuData = {
-            buttons: {
-                display: 'Buttons',
+            novajus: {
+                display: 'Novajus',
                 icon: 'check-square',
                 nodes: {
+                    processo: {
+                        display: 'Matters',
+                        nodes: {
+                            processosPorStatus: {
+                                display: 'Matters by status',
+                                type: 'textbox'
+                            }
+                        }
+                    },
                     button: {
                         type: 'button',
                         display: 'Button'
                     }
                 }
             },
-            forms: {
-                display: 'Forms',
+            rto: {
+                display: 'Revista dos Tribunais',
                 icon: 'check-square',
                 nodes: {
                     textbox: {
                         type: 'textbox',
-                        display: 'Text input'
+                        display: 'Legislations'
+                    }
+                }
+            },
+            proview: {
+                display: 'Proview',
+                icon: 'check-square',
+                nodes: {
+                    textbox: {
+                        type: 'textbox',
+                        display: 'My book updates'
                     }
                 }
             }

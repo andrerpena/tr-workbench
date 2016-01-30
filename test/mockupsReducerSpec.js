@@ -1,11 +1,11 @@
-import mockupsReducer from '../src/client/reducers/mockupsReducer';
+import mockupsReducer from '../src/client/reducers/dashboardReducer';
 import deepFreeze from 'deep-freeze';
 import chai from 'chai';
-import { ADD_COMPONENT, MOVE_COMPONENT, SET_SELECTION, UPDATE_COMPONENT_SIZE } from '../src/client/actions/mockupActions';
+import { ADD_COMPONENT, MOVE_COMPONENT, SET_SELECTION, UPDATE_COMPONENT_SIZE } from '../src/client/actions/dashboadActions';
 
 var assert = chai.assert;
 
-describe('mockupsReducer', function () {
+describe('dashboardReducer', function () {
     it('should return the default state', function () {
         let mockups = mockupsReducer(undefined, {});
         assert.strictEqual(mockups.length, 1);

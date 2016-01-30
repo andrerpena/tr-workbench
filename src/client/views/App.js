@@ -3,11 +3,11 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Header from '../components/Header';
 import AppBody from '../components/AppBody';
-import * as MockupActions from '../actions/mockupActions';
+import * as MockupActions from '../actions/dashboadActions';
 
 function mapStateToProps(state) {
     return {
-        mockups: state.mockups
+        dashboard: state.dashboard
     }
 }
 
@@ -19,7 +19,7 @@ function mapDispatchToProps(dispatch) {
 var App = React.createClass({
 
     propTypes: {
-        mockups: React.PropTypes.array.isRequired
+        dashboard: React.PropTypes.object.isRequired
     },
 
     render: function () {
