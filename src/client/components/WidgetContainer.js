@@ -31,7 +31,7 @@ var WidgetContainer = React.createClass({
     },
 
     render: function () {
-        return <div>Fuck this shit</div>
+        return <div className="widget-container">Fuck this shit</div>
     }
 });
 
