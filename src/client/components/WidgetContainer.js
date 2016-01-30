@@ -25,6 +25,8 @@ function collect(connect, monitor) {
 var WidgetContainer = React.createClass({
 
     propTypes: {
+        panelIndex: React.PropTypes.number.isRequired,
+        containerIndex: React.PropTypes.number.isRequired,
         widgets: React.PropTypes.array,
     },
 

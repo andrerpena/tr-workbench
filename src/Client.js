@@ -7,8 +7,8 @@ import DevTools from './client/DevTools';
 
 // styles
 import fontAwesome from 'font-awesome/less/font-awesome.less';
-import styles from './client/less/styles.scss';
-import sassTest from './client/less/test.scss';
+import styles from './client/sass/styles.scss';
+import sassTest from './client/sass/test.scss';
 
 const store = configureStore();
 

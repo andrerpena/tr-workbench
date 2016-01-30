@@ -18,7 +18,7 @@ var AppBody = React.createClass({
                     <ComponentsMenu />
                 </div>
                 <div className="col-md-10">
-                    <WidgetContainer />
+                    <WidgetContainer panelIndex={0} containerIndex={0} />
                 </div>
                 <CustomDragLayer />
             </div>
