@@ -1,0 +1,23 @@
+.surface-viewport {
+  overflow: auto;
+
+  .surface {
+
+    @import "bootstrap.sketch";
+
+    background-size: 20px 20px;
+    background-image: linear-gradient(to right, #eaeaea 1px, transparent 1px), linear-gradient(to bottom, #ebebeb 1px, transparent 1px);
+
+    background-color: white;
+    position: relative;
+
+    .form-group {
+      margin: 0;
+    }
+  }
+
+  .popover-content-medium {
+    width: 200px;
+  }
+
+}

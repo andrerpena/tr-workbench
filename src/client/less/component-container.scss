@@ -1,0 +1,43 @@
+.component-container {
+
+  .component-container-content {
+    pointer-events: none;
+  }
+
+  .component-container-handles {
+
+  }
+
+  .component-container-handle {
+    opacity: 0.5;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    position: absolute;
+    border: 1px solid black;
+  }
+
+  .component-container-handle.north {
+    cursor: n-resize;
+  }
+
+  .component-container-handle.south {
+    cursor: n-resize;
+  }
+
+  .component-container-handle.north-west {
+    cursor: nw-resize;
+  }
+
+  .component-container-handle.north-east {
+    cursor: ne-resize;
+  }
+
+  .component-container-handle.south-west {
+    cursor: sw-resize;
+  }
+
+  .component-container-handle.south-east {
+    cursor: se-resize;
+  }
+}
