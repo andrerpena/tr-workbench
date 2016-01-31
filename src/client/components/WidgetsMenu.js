@@ -1,7 +1,7 @@
 import React from 'react';
 import VNav from './VNav';
 
-var ComponentsMenu = React.createClass({
+var WidgetsMenu = React.createClass({
 
     handleItemClick: function (node) {
         console.log(node);
@@ -14,18 +14,9 @@ var ComponentsMenu = React.createClass({
                 display: 'Novajus',
                 icon: 'check-square',
                 nodes: {
-                    processo: {
-                        display: 'Matters',
-                        nodes: {
-                            processosPorStatus: {
-                                display: 'Matters by status',
-                                type: 'textbox'
-                            }
-                        }
-                    },
-                    button: {
-                        type: 'button',
-                        display: 'Button'
+                    processosPorStatus: {
+                        display: 'Matters by status',
+                        id: 'textbox'
                     }
                 }
             },
@@ -34,7 +25,7 @@ var ComponentsMenu = React.createClass({
                 icon: 'check-square',
                 nodes: {
                     textbox: {
-                        type: 'textbox',
+                        id: 'textbox',
                         display: 'Legislations'
                     }
                 }
@@ -44,7 +35,7 @@ var ComponentsMenu = React.createClass({
                 icon: 'check-square',
                 nodes: {
                     textbox: {
-                        type: 'textbox',
+                        id: 'textbox',
                         display: 'My book updates'
                     }
                 }
@@ -55,4 +46,4 @@ var ComponentsMenu = React.createClass({
     }
 });
 
-export default ComponentsMenu;
+export default WidgetsMenu;

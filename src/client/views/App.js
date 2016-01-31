@@ -35,7 +35,7 @@ var App = React.createClass({
                             updateComponentSize: this.props.updateComponentSize
                         }
                     }
-                    mockups={this.props.mockups}
+                    dashboard={this.props.dashboard}
                 />
             </div>
         );

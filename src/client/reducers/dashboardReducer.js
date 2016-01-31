@@ -12,6 +12,12 @@ var defaultState =
                 containers: [
                     {
                         widgets: [
+                            {
+                                id: 'matters-by-status'
+                            },
+                            {
+                                id: 'matters-by-nature'
+                            }
                         ]
                     }
                 ]

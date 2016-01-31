@@ -16,7 +16,6 @@ const componentSource = {
 function collect(connect, monitor) {
     return {
         connectDragSource: connect.dragSource(),
-        connectDragPreview: connect.dragPreview(),
         isDragging: monitor.isDragging()
     }
 }
@@ -45,11 +44,11 @@ var VNavItem = React.createClass({
         }
     },
 
-    componentDidMount() {
-        this.props.connectDragPreview(getEmptyImage(), {
-            captureDraggingState: true
-        });
-    },
+    //componentDidMount() {
+    //    this.props.connectDragPreview(getEmptyImage(), {
+    //        captureDraggingState: true
+    //    });
+    //},
 
     /**
      * ReactJS rendering function.
@@ -84,4 +83,4 @@ var VNavItem = React.createClass({
     }
 });
 
-export default DragSource(ItemTypes.ADD_COMPONENT, componentSource, collect)(VNavItem);
+export default DragSource('fuck', componentSource, collect)(VNavItem);

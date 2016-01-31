@@ -9,8 +9,27 @@ import _ from 'underscore';
 
 
 const widgetTarget = {
-    drop: function (props, monitor, component) {
+    hover: function(props, monitor, component) {
 
+        // offset relative to the window
+        let windowOffset = monitor.getClientOffset();
+        let windowOffsetX = windowOffset.x;
+        let windowOffsetY = windowOffset.y;
+
+        // offset relative to the widgetContainer
+        let widgetContainerBoundingClientRect = ReactDom.findDOMNode(component).getBoundingClientRect();
+        let widgetContainerOffsetX = widgetContainerBoundingClientRect.left;
+        let widgetContainerOffsetY = widgetContainerBoundingClientRect.top;
+
+        let relativeOffset = {
+            x: windowOffsetX - widgetContainerOffsetX,
+            y: windowOffsetY - widgetContainerOffsetY
+        };
+
+        console.log(relativeOffset);
+
+    },
+    drop: function (props, monitor, component) {
 
     }
 };
@@ -27,12 +46,15 @@ var WidgetContainer = React.createClass({
     propTypes: {
         panelIndex: React.PropTypes.number.isRequired,
         containerIndex: React.PropTypes.number.isRequired,
-        widgets: React.PropTypes.array,
+        widgets: React.PropTypes.array
     },
-
     render: function () {
-        return <div className="widget-container">Fuck this shit</div>
+        const { connectDropTarget, monitor, isDragging, isOver } = this.props;
+        return connectDropTarget(
+            <div>
+                <div className="widget-container" ref="viewport">Fuck this shit</div>
+            </div>);
     }
 });
 
-export default DropTarget([ItemTypes.ADD_WIDGET], widgetTarget, collect)(WidgetContainer);
+export default DropTarget('fuck', widgetTarget, collect)(WidgetContainer);
