@@ -1,0 +1,11 @@
+.widget {
+  height: 350px;
+  border: 1px solid $table-border-color;
+  margin-bottom: $line-height-computed * 0.8;
+
+  .widget-header {
+    background-color: $gray-lighter;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    border-bottom: 1px solid $table-border-color;
+  }
+}

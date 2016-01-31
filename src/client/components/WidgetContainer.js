@@ -4,8 +4,9 @@ import { ItemTypes } from '../Constants';
 import { DropTarget } from 'react-dnd';
 import { ADD_COMPONENT } from '../actions/dashboadActions';
 import ComponentContainer from './ComponentContainer';
-import Popover from 'react-bootstrap/lib/Popover'
+import Widget from './Widget';
 import _ from 'underscore';
+
 
 
 const widgetTarget = {
@@ -26,7 +27,7 @@ const widgetTarget = {
             y: windowOffsetY - widgetContainerOffsetY
         };
 
-        console.log(relativeOffset);
+        console.log(monitor.getItem());
 
     },
     drop: function (props, monitor, component) {
@@ -46,13 +47,20 @@ var WidgetContainer = React.createClass({
     propTypes: {
         panelIndex: React.PropTypes.number.isRequired,
         containerIndex: React.PropTypes.number.isRequired,
-        widgets: React.PropTypes.array
+        widgets: React.PropTypes.array.isRequired
     },
     render: function () {
+        console.log(this.props.widgets);
         const { connectDropTarget, monitor, isDragging, isOver } = this.props;
         return connectDropTarget(
             <div>
-                <div className="widget-container" ref="viewport">Fuck this shit</div>
+                <div className="widget-container" ref="viewport">
+                    {
+                        this.props.widgets.map((w, wi) => {
+                            return <Widget key={`widget-${wi}`} />
+                        })
+                    }
+                </div>
             </div>);
     }
 });

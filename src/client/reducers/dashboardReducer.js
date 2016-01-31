@@ -19,6 +19,12 @@ var defaultState =
                                 id: 'matters-by-nature'
                             }
                         ]
+                    },
+                    {
+                        widgets: []
+                    },
+                    {
+                        widgets: []
                     }
                 ]
             }

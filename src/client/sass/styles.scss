@@ -4,6 +4,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import './header';
 @import './vnav';
 @import './widget-container';
+@import './widget';
 @import 'component-container';
 @import 'scrollbar';
 
@@ -11,7 +12,16 @@ html, body {
   height: 100%;
 }
 
+.widgets-container-wrapper {
+  padding-top: $padding-base-horizontal;
+}
+
+.app-body {
+  padding: 0 $padding-base-horizontal;
+}
+
 .row-no-padding {
+  margin: 0;
   [class*="col-"] {
     padding-left: 0 !important;
     padding-right: 0 !important;
